@@ -156,8 +156,8 @@ public class Movement2D : MonoBehaviour
         }
         _jumpButtonPressed = false;
         ApplyAirLinearDrag();
-        _rigidbody2D.velocity = new Vector2(_horizontalDirection, 0f);
-        _rigidbody2D.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+        _rigidbody2D.velocity = new Vector2((_onWall ? _onRightWall ? -1f : 1f : _horizontalDirection) , 0f);
+        _rigidbody2D.AddForce((_onWall ? _onRightWall ? new Vector2(-1, 1) : new Vector2(1, 1) : Vector2.up) * _jumpForce, ForceMode2D.Impulse);
 
     }
 
@@ -183,11 +183,12 @@ public class Movement2D : MonoBehaviour
     private void StickToWall()
     {
         //Empuja al personaje contra la pared
-        if(_onRightWall && _horizontalDirection >= 0 && !_onGround)
+
+        if(_onRightWall && _horizontalDirection >= 0 && !_onGround && !_canJump)
         {
             _rigidbody2D.velocity = new Vector2(1, _rigidbody2D.velocity.y);
 
-        } else if (!_onRightWall  && _horizontalDirection <= 0 && !_onGround)
+        } else if (!_onRightWall  && _horizontalDirection <= 0 && !_onGround && !_canJump)
         {
             _rigidbody2D.velocity = new Vector2(-1, _rigidbody2D.velocity.y);
         }
