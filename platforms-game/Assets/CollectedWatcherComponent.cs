@@ -20,7 +20,6 @@ public class CollectedWatcherComponent : MonoBehaviour
         _totalCollectables = GameObject.FindGameObjectsWithTag("Collectable").Length;
         _textMesh.text = _currentCollectables+"/" + _totalCollectables;
     }
-
     public void UpdateCollectables(int collectables)
     {
         _currentCollectables = collectables;
