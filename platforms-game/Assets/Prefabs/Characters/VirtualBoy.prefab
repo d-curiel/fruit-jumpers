@@ -8,12 +8,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1771092069, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7541412
+      objectReference: {fileID: 0}
+    - target: {fileID: 1771092069, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
       propertyPath: m_Size.y
-      value: 1.1804848
+      value: 1.026695
+      objectReference: {fileID: 0}
+    - target: {fileID: 1771092069, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0056155324
       objectReference: {fileID: 0}
     - target: {fileID: 1771092069, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
       propertyPath: m_Offset.y
-      value: -0.13145065
+      value: -0.116804
       objectReference: {fileID: 0}
     - target: {fileID: 1771092069, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
       propertyPath: m_UsedByEffector
@@ -21,11 +29,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 646403203502597972, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
       propertyPath: m_Name
-      value: Virtualboy
+      value: VirtualBoy
       objectReference: {fileID: 0}
     - target: {fileID: 646403203502597972, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1483162540337598244, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
       propertyPath: _groundLayer.m_Bits
@@ -39,6 +47,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 0f69233d05fbc2c4a9df69fefdc2ab5b, type: 2}
+    - target: {fileID: 6818606138819109143, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6818606138819109143, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
       propertyPath: m_Sprite
       value: 

@@ -12,7 +12,11 @@ public class DamageableBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Kill();
+        if (!_isDead)
+        {
+            Kill();
+        }
+        
     }
 
     internal void Kill()

@@ -89,7 +89,7 @@ MonoBehaviour:
   _rectTransform: {fileID: 0}
   _parentRectTransform: {fileID: 358129651141439261}
   _image: {fileID: 358129651141439263}
-  repeatCount: {x: 35, y: 35}
+  repeatCount: {x: -35, y: 35}
   scroll: {x: 0.5, y: 0.5}
   offset: {x: 0, y: 0}
   possibleTextures:
