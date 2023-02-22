@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class StageFlowComponent : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Objects to activate or deactivate")]
+    [SerializeField] GameObject[] _objectsToAffect;
+
+    private void OnEnable()
     {
-        
+        Time.timeScale = 0;
+        ChangeObjectsState(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        Time.timeScale = 1;
+        ChangeObjectsState(false);
+    }
+
+    private void ChangeObjectsState(bool state)
+    {
+        foreach (GameObject objectToAffect in _objectsToAffect)
+        {
+            objectToAffect.SetActive(state);
+        }
     }
 }

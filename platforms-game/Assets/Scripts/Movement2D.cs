@@ -75,7 +75,7 @@ public class Movement2D : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MoveCharacter(); 
+        MoveCharacter();
         if (_onGround)
         {
             ApplyGroundLinearDrag();
@@ -134,7 +134,8 @@ public class Movement2D : MonoBehaviour
     public void OnMovementInput(InputAction.CallbackContext context)
     {
         _horizontalDirection = context.ReadValue<Vector2>().x;
-        
+
+
     }
 
     public void OnJumpInput(InputAction.CallbackContext context)
@@ -233,7 +234,6 @@ public class Movement2D : MonoBehaviour
             }
         }
     }
-
 
     private void OnDrawGizmos()
 

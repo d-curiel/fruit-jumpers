@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 2050801368}
   - component: {fileID: 7494825333294050637}
   - component: {fileID: 1801588898684889216}
+  - component: {fileID: 5768042846712778244}
   m_Layer: 9
   m_Name: ShootingPlant
   m_TagString: Untagged
@@ -158,9 +159,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03445536, y: -0.15192926}
-  m_Size: {x: 0.640726, y: 1.235462}
-  m_Direction: 0
+  m_Offset: {x: 0.051545702, y: 0.3919505}
+  m_Size: {x: 0.7296855, y: 0.14770813}
+  m_Direction: 1
 --- !u!114 &4994863725284289159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +241,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cc6e22547ab575468d8bcca2a969837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _takeDamageLayer:
+    serializedVersion: 2
+    m_Bits: 0
   OnDead:
     m_PersistentCalls:
       m_Calls:
@@ -327,3 +331,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23a05f347714a314e9cdf0b3b9c764ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &5768042846712778244
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8541032397748898013}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.27645397}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1428572, y: 1.5}
+    newSize: {x: 1, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.615274, y: 0.94709206}
+  m_EdgeRadius: 0
