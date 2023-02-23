@@ -114,6 +114,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: a90b1f6d-092e-4ba0-892b-f6b308afaa9e
     m_ActionName: Character/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_ActionId: ee262820-7e71-4e03-8d60-dd0c0e61f074
+    m_ActionName: Character/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Character
@@ -154,9 +170,33 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1025768534406660280, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
+      propertyPath: OnCollectablesChange.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025768534406660280, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
+      propertyPath: OnCollectablesChange.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025768534406660280, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
+      propertyPath: OnCollectablesChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateCollectables
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025768534406660280, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
+      propertyPath: OnCollectablesChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CollectedWatcherComponent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025768534406660280, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
+      propertyPath: OnCollectablesChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1483162540337598244, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
       propertyPath: _groundLayer.m_Bits
       value: 57920
+      objectReference: {fileID: 0}
+    - target: {fileID: 6691290270217523298, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
+      propertyPath: m_Layer
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8406457816724937186, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
       propertyPath: m_RootOrder
@@ -164,11 +204,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8406457816724937186, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.47999954
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8406457816724937186, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6799998
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8406457816724937186, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -209,6 +249,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8406457816724937186, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
   m_PrefabInstance: {fileID: 7466717299332698704}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3216491585120010867 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5421311254593654819, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
+  m_PrefabInstance: {fileID: 7466717299332698704}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8027498776875709700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f393a9011092e2d4f8d9c45c2566b9b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!70 &7466717298668988981 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1771092069, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
+  m_PrefabInstance: {fileID: 7466717299332698704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8027498776875709700 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646403203502597972, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
@@ -226,20 +282,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cc6e22547ab575468d8bcca2a969837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _takeDamageLayer:
+    serializedVersion: 2
+    m_Bits: 82432
   OnDead:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 9042144393647878950}
+        m_TargetAssemblyTypeName: UnityEngine.Rigidbody2D, UnityEngine
+        m_MethodName: set_gravityScale
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 3216491585120010867}
+        m_TargetAssemblyTypeName: AnimatedObject, Assembly-CSharp
+        m_MethodName: ActivateBool
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: IsHitted
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8289538850368281972}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7466717298668988981}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &8289538850368281972 stripped
 MonoBehaviour:
@@ -252,3 +359,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6499e88c3fe66b348abfc0e9e0e07e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &9042144393647878950 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1937460133367292278, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
+  m_PrefabInstance: {fileID: 7466717299332698704}
+  m_PrefabAsset: {fileID: 0}
