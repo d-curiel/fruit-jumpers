@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(AnimatedObject))]
+[RequireComponent(typeof(JumpSoundComponent))]
 public class Movement2D : MonoBehaviour
 {
 
@@ -13,6 +14,7 @@ public class Movement2D : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
     private SpriteRenderer _spriteRenderer;
     private AnimatedObject _animatedObject;
+    private JumpSoundComponent _jumpSoundComponent;
 
     [Header("Layer Mask")]
     [SerializeField] private LayerMask _groundLayer;
@@ -65,6 +67,7 @@ public class Movement2D : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _animatedObject = GetComponent<AnimatedObject>();
+        _jumpSoundComponent = GetComponent<JumpSoundComponent>();
     }
 
     private void Update()
@@ -159,6 +162,7 @@ public class Movement2D : MonoBehaviour
         ApplyAirLinearDrag();
         _rigidbody2D.velocity = new Vector2((_onWall ? _onRightWall ? -1f : 1f : _horizontalDirection) , 0f);
         _rigidbody2D.AddForce((_onWall ? _onRightWall ? new Vector2(-1, 1) : new Vector2(1, 1) : Vector2.up) * _jumpForce, ForceMode2D.Impulse);
+        _jumpSoundComponent.PlayJumpSound();
 
     }
 

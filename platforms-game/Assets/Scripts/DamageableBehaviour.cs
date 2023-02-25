@@ -9,6 +9,7 @@ public class DamageableBehaviour : MonoBehaviour
     [SerializeField] LayerMask _takeDamageLayer;
     private bool _isDead = false;
     public UnityEvent OnDead;
+    public UnityEvent onAfterDead;
 
     public bool IsDead { get { return _isDead;  } }
 
@@ -31,5 +32,10 @@ public class DamageableBehaviour : MonoBehaviour
     {
         _isDead = true;
         OnDead?.Invoke();
+    }
+
+    public void InvoleOnDead()
+    {
+        onAfterDead?.Invoke();
     }
 }

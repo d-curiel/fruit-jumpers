@@ -14,7 +14,10 @@ public class CollectedWatcherComponent : MonoBehaviour
     {
         _textMesh = GetComponent<TextMeshProUGUI>();
     }
-
+    public bool IsAllCollectablesCollected()
+    {
+        return _totalCollectables == _currentCollectables;
+    } 
     private void Start()
     {
         _totalCollectables = GameObject.FindGameObjectsWithTag("Collectable").Length;
