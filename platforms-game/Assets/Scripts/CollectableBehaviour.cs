@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CollectableBehaviour : MonoBehaviour
 {
     private bool _isCollected = false;
-
+    public UnityEvent OnCollect;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,8 +15,7 @@ public class CollectableBehaviour : MonoBehaviour
         {
             _isCollected = true;
             collectable.CatchCollectable();
-            //habría que lanzar una animación antes de desactivarlo, como con los enemigos
-            gameObject.SetActive(false);
+            OnCollect?.Invoke();
         }
     }
 }

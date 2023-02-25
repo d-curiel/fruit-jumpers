@@ -309,6 +309,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onAfterDead:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &2050801368
 Rigidbody2D:
   serializedVersion: 4
@@ -503,4 +506,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d43beb1af4c5c4999afa82369af9ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deadClip: {fileID: 8300000, guid: f8ffb7e8236aaf6488c03af988ede5e3, type: 3}
+  _deadClip: {fileID: 8300000, guid: 3d10b16c50c8ea0458a708a9acf6a28b, type: 3}

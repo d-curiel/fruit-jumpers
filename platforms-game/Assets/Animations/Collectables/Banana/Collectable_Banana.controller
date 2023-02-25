@@ -36,7 +36,7 @@ AnimatorController:
   m_Name: Collectable_Banana
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: isCollectable
+  - m_Name: isCollected
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -64,7 +64,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isCollectable
+    m_ConditionEvent: isCollected
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6619551072225461781}
