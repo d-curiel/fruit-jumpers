@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: 5768042846712778244}
   - component: {fileID: 8762936341951760859}
   - component: {fileID: 2571351977834475981}
+  - component: {fileID: 9155529005406119122}
   m_Layer: 9
   m_Name: ShootingPlant
   m_TagString: Untagged
@@ -506,4 +507,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d43beb1af4c5c4999afa82369af9ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _volume: 0.4
   _deadClip: {fileID: 8300000, guid: 3d10b16c50c8ea0458a708a9acf6a28b, type: 3}
+--- !u!114 &9155529005406119122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8541032397748898013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56701085f73691a4495db7800431b7e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _volume: 0.4
+  _clip: {fileID: 8300000, guid: fea165b56fd00c7448235a391c9d9ad1, type: 3}

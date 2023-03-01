@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DashUntilHit : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class DashUntilHit : MonoBehaviour
     Vector2 _lastSmashDirection;
     bool _hasSmashed = false;
 
+    public UnityEvent OnStomp;
+
 
     private void Awake()
     {
@@ -44,6 +47,7 @@ public class DashUntilHit : MonoBehaviour
     {
         if (((_smashLayer.value & 1 << collision.gameObject.layer) == 1 << collision.gameObject.layer) && !_hasSmashed)
         {
+            OnStomp?.Invoke();
             _hasSmashed = true;
             if (_smashDirection.x > 0 || _smashDirection.y > 0)
             {
