@@ -24,7 +24,7 @@ TagManager:
   - MovingPlatform
   - DeadZone
   - Smashable
-  - 
+  - Detector
   - 
   - 
   - 
@@ -47,6 +47,9 @@ TagManager:
     locked: 0
   - name: BaseGround
     uniqueID: 2935260317
+    locked: 0
+  - name: Enemies
+    uniqueID: 1439415983
     locked: 0
   - name: Collectables
     uniqueID: 428838773

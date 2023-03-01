@@ -16,7 +16,7 @@ public class SmashingDetector : MonoBehaviour
     {
         if(_damageableBehaviour != null)
         {
-            _damageableBehaviour.Kill();
+            _damageableBehaviour.TryToKill(collision.gameObject.layer);
         }
     }
 

@@ -26,7 +26,7 @@ public class DetectJumpOver : MonoBehaviour
                 {
                     rb.velocity = Vector2.up;
                     rb.AddForce(Vector2.up * _bounceForce, ForceMode2D.Impulse);
-                    _db.Kill();
+                    _db.TryToKill(collision.gameObject.layer);
                 }
             }
         }

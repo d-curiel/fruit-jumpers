@@ -6,7 +6,8 @@ using UnityEngine.Events;
 public class DamageableBehaviour : MonoBehaviour
 {
     [Header("Layers to Smash")]
-    [SerializeField] LayerMask _takeDamageLayer;
+    [SerializeField] 
+    LayerMask _takeDamageLayerMask;
     private bool _isDead = false;
     public UnityEvent OnDead;
     public UnityEvent onAfterDead;
@@ -15,23 +16,16 @@ public class DamageableBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        CheckKill(collision.gameObject.layer);
-
+        TryToKill(collision.gameObject.layer);
     }
     
-    private void CheckKill(int layer)
+    internal void TryToKill(int layer)
     {
-        if (((_takeDamageLayer.value & 1 << layer) == 1 << layer) && !_isDead)
+        if ((_takeDamageLayerMask == (_takeDamageLayerMask | (1 << layer))) && !_isDead)
         {
-            Kill();
+            _isDead = true;
+            OnDead?.Invoke();
         }
-    }
-
-    internal void Kill()
-    {
-        _isDead = true;
-        OnDead?.Invoke();
     }
 
     public void InvoleOnDead()

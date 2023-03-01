@@ -8,12 +8,10 @@ public class IAPatrolPathBehaviour : MonoBehaviour
     private Transform[] _patrolPoints;
     [SerializeField]
     [Range(0.1f, 1f)]
-    private float _ArriveDistance = 1;
-    private float _WaitingTime = 0.5f;
+    private float _arriveDistance = 1;
+    private float _waitingTime = 0.5f;
     [SerializeField]
-    private bool _IsWaiting = false;
-    [SerializeField]
-    private bool _IsInitialized = false;
+    private bool _isWaiting = false;
     [SerializeField]
     private int _currentIndex = 0;
     [SerializeField]
@@ -21,22 +19,17 @@ public class IAPatrolPathBehaviour : MonoBehaviour
 
     public void PerformAction(EnemyController controller)
     {
-        if (!_IsWaiting)
+        if (!_isWaiting)
         {
             if (_patrolPoints.Length < 2)
             {
                 return;
             }
 
-            if (!_IsInitialized)
-            {
-                var currentPathPoint = _patrolPoints[_currentIndex];
-                _IsInitialized = true;
-            }
             _currentDistance = Vector2.Distance(transform.position, _patrolPoints[_currentIndex].position);
-            if (_currentDistance < _ArriveDistance)
+            if (_currentDistance <= _arriveDistance)
             {
-                _IsWaiting = true;
+                _isWaiting = true;
                 StartCoroutine(Wait());
                 return;
             }
@@ -47,9 +40,9 @@ public class IAPatrolPathBehaviour : MonoBehaviour
 
     private IEnumerator Wait()
     {
-        yield return new WaitForSeconds(_WaitingTime);
+        yield return new WaitForSeconds(_waitingTime);
         _currentIndex = (_currentIndex+1) % _patrolPoints.Length;
-        _IsWaiting = false;
+        _isWaiting = false;
 
     }
 }

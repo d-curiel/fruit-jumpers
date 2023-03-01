@@ -21,7 +21,7 @@ public class IAMovement : MonoBehaviour
 
     public void Move(Vector2 movementVector)
     {
-        this._currentMovement = movementVector;
+        _currentMovement = movementVector;
 
     }
 
@@ -29,5 +29,6 @@ public class IAMovement : MonoBehaviour
     {
         _sr.flipX = _currentMovement.x > 0;
         _rb.velocity = (Vector2)transform.right * _currentMovement.normalized.x * speed * Time.fixedDeltaTime;
+        Debug.Log(gameObject.name + " velocity " + _rb.velocity);
     }
 }
