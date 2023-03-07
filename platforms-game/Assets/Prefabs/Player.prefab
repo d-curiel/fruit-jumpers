@@ -251,6 +251,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 646403203502597972, guid: 183e59b8e22a7724faaa47bca8a3d6b3, type: 3}
   m_PrefabInstance: {fileID: 7466717299332698704}
   m_PrefabAsset: {fileID: 0}
+--- !u!81 &2333003373304798147
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8027498776875709700}
+  m_Enabled: 1
 --- !u!82 &8553645768394011223
 AudioSource:
   m_ObjectHideFlags: 0
@@ -361,7 +369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _takeDamageLayerMask:
     serializedVersion: 2
-    m_Bits: 16896
+    m_Bits: 82432
   OnDead:
     m_PersistentCalls:
       m_Calls:
@@ -440,6 +448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae15ef78b6e68d4db1ae38423d46c31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _volume: 0.75
   _leftFootstep: {fileID: 8300000, guid: 511cec499b908e1489be62534f99584c, type: 3}
   _rightFootstep: {fileID: 8300000, guid: 4e17e4814cf3602409722f5b5e7e9be8, type: 3}
 --- !u!114 &8289538850368281972 stripped

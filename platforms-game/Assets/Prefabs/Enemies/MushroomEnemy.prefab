@@ -167,6 +167,42 @@ MonoBehaviour:
           m_StringArgument: OnDie
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4739457083638956434}
+        m_TargetAssemblyTypeName: DeadSoundComponent, Assembly-CSharp
+        m_MethodName: PlayDeadSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3864843651495744377}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2652675540495504027}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onAfterDead:
     m_PersistentCalls:
       m_Calls: []
@@ -339,7 +375,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -391,4 +427,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d43beb1af4c5c4999afa82369af9ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _volume: 0.45
   _deadClip: {fileID: 8300000, guid: 3d10b16c50c8ea0458a708a9acf6a28b, type: 3}

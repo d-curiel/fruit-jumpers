@@ -12,6 +12,7 @@ public class MusicLoopBackground : SoundPlayerInterface
     private void Start()
     {
         _as.clip = _clip;
+        _as.loop = true;
         _as.Play();
     }
 }
